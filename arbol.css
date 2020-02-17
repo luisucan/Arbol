@@ -1,0 +1,10 @@
+.contextMenu{
+    border: 1px solid silver;
+    width: 200px;
+    height: auto;
+    position: fixed;
+    background:#eceff1;
+    border-radius: 4%;
+    z-index: 100;
+}
+
