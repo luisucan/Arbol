@@ -1,15 +1,57 @@
-var arbol = new Arbol('arbol','Encuesta 1');
+var menu = [{
+        texto: 'Nueva rama',
+        fn: function(instancia) {
+            console.log('click add', instancia);
+        }
+    },
+    {
+        texto: 'Editar rama',
+        fn: function() {
+            console.log('click edit');
+        }
+    },
+    {
+        texto: 'Eliminar rama',
+        fn: function() {
+            console.log('click delete');
+        }
+    }
+];
 
-/*arbol.agregarRama(new Rama({
-    texto:'rama_principal',
-    data:[]
-}));*/
 
-let i = 0;
-document.getElementById('btnadd').onclick = function(){
-    let rama = new Rama({
-        texto:'rama'+(i++),
-        data:[]
+var arbol = new Arbol('arbol', {
+    texto: 'Encuesta 1',
+    data: [],
+    menu
+});
+
+let h1 = arbol.getRaiz().agregarRama(new Rama({
+    texto: 'Hijo 1',
+    data: [],
+    menu
+}));
+
+h1.getRaiz().agregarRama(new Rama({
+    texto: 'Nieto 1',
+    data: [],
+    menu
+}));
+
+
+
+
+document.getElementById('btnVentana').onclick = function() {
+    let alert = new AlertUI({
+        ancho: 200,
+        alto: 150,
+        titulo: 'Agregar',
+        html: `
+            <center>
+                <input type="text" />
+                <br>
+                <button class="btnUI Verde">Agregar</button>
+            </center>
+        `
     });
-    arbol.agregarRama(rama);
+    alert.show();
 }

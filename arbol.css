@@ -1,10 +1,55 @@
-.contextMenu{
-    border: 1px solid silver;
+.contextMenu {
     width: 200px;
     height: auto;
     position: fixed;
-    background:#eceff1;
+    background: #eceff1;
     border-radius: 4%;
     z-index: 100;
 }
 
+.itemMenu {
+    border: 1px solid silver;
+    padding: 4px 0px 5px 5px;
+    cursor: pointer;
+}
+
+.itemMenu:hover {
+    background-color: #bdbdbd;
+}
+
+.btnUI {
+    border: 0px;
+    padding: 8px 10px 8px 10px;
+    margin: 4px 0px 4px 0px;
+    cursor: pointer;
+}
+
+.Verde {
+    background: green;
+    color: white;
+}
+
+.AlertUI {
+    border: 0px solid silver;
+    background: #e0e0e0;
+    position: absolute;
+    z-index: 100px;
+}
+
+.AlertUITitulo {
+    border: 1px solid #263238;
+    background: #263238;
+    color: white;
+}
+
+.AlertUICuerpo {
+    padding: 3px 3px 3px 3px;
+}
+
+.AlertUICerrar {
+    color: antiquewhite;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
